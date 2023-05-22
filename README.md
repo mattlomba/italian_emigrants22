@@ -13,8 +13,7 @@ The ultimate join it's between the geographical coordinates, extracted by the li
 Now it's possible to plot the data, for this I've used the well known `ggplot2` package.
 (more info about the libraries used is in the script above in the repository)
 
-
-<img src="https://github.com/mattlomba/italian_emigrants22/blob/main/little_italy.html" width="630" height="620">
+![samples](italy_plot.png)
 
 ## Instructions
 
