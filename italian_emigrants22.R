@@ -2,9 +2,8 @@
 
 #-------------------------------------------------------------------------------
 #LIBRARIES:
-#don't use other libraries for reading the xlsx files
+#don't use other libraries to read the xlsx file, they won't work 'cause the data are semi-structured (there are plots and pivot tables in the xlsx file)
 library(xlsx)
-
 #web scraping package:
 library(rvest) 
 #data manipulation packages:
@@ -25,11 +24,11 @@ library(scico)
 
 #save where you prefer and set the path:
 #(you can do it also manually from the settings *)
-setwd("C:/Users/39349/OneDrive/Desktop/try_italy")
+setwd("C:/Users/XXXX/yourpath.../")
 
 #-------------------------------------------------------------------------------
 #DATA READING
-#reading the 6' sheets of the AIRE xls file
+#reading the 6' sheets of the AIRE xlsx file
 aire_data <- xlsx::read.xlsx("INT00041_AIRE_DATI_2021_ed_2022.xls",6)
 str(aire_data)  
 
@@ -143,6 +142,13 @@ graph <- ggplot(geo_data,aes(long,lat,text = paste0(region,": ",format(round(rat
   theme_bw()
 
 ggplotly(graph, tooltip = list("text"))
+
+
+htmlwidgets::saveWidget(
+  widget = graph, #the plotly object
+  file = "italyhtml.html", #the path & file name
+  selfcontained = TRUE #creates a single html file
+)
 
 #descriptive STATISTICS --------------------------------------------------------
 
