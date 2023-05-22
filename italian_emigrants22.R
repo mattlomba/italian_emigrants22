@@ -42,7 +42,7 @@ View(aire_data) #semi-structured data
 #-------------------------------------------------------------------------------
 #WEB SCRAPING 
 
-#reading the table's "Provincie" from Wikipedia
+#reading the table's "Province" from Wikipedia
 page = read_html("https://it.wikipedia.org/wiki/Province_d%27Italia")
 
 #we need this official data for 2 main reasons: 
