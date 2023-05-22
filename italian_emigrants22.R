@@ -24,7 +24,7 @@ library(scico)
 
 #save where you prefer and set the path:
 #(you can do it also manually from the settings *)
-setwd("C:/Users/XXXX/yourpath.../")
+setwd("C:/Users/XXXXX/yourpath...")
 
 #-------------------------------------------------------------------------------
 #DATA READING
@@ -143,12 +143,6 @@ graph <- ggplot(geo_data,aes(long,lat,text = paste0(region,": ",format(round(rat
 
 ggplotly(graph, tooltip = list("text"))
 
-
-htmlwidgets::saveWidget(
-  widget = graph, #the plotly object
-  file = "italyhtml.html", #the path & file name
-  selfcontained = TRUE #creates a single html file
-)
 
 #descriptive STATISTICS --------------------------------------------------------
 
