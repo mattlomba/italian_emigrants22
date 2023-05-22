@@ -14,8 +14,7 @@ Now it's possible to plot the data, for this I've used the well known `ggplot2` 
 (more info about the libraries used is in the script above in the repository)
 
 
-![samples](italy_plot.png)
-
+<img src="https://github.com/mattlomba/italian_emigrants22/blob/main/little_italy.html" width="630" height="620">
 
 ## Instructions
 
