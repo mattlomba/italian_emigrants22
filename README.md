@@ -20,8 +20,7 @@ Now it's possible to plot it!
 
 The "italian_emigrants22.R" it's a reproducible code, written in R language, that only needs in input the AIRE dataset.
 Just pay attention that all the packages are correctly installed on your device and that you've settled the path where the AIRE dataset is. 
-The plot is in the "Viewer" not in "Plots", because it's an interactive graph: clicking on the subregion you prefer it'll show you the name and rate. 
-
+The plot is in the "Viewer" not in "Plots", because it's an interactive graph made with `plotly`.
 
 
 
