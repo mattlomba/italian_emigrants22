@@ -13,9 +13,8 @@ The ultimate join it's between the geographical coordinates, extracted by the li
 Now it's possible to plot the data, for this I've used the well known `ggplot2` package.
 (more info about the libraries used is in the script above in the repository)
 
-The final cherry (on the cake) it's that you can interact with the plot, indeed if you click on the subregion of your interest it'll show you the name and the rate!
 
-![samples](little_italy.html =630x620)
+![samples](italy_plot.png)
 
 
 ## Instructions
