@@ -14,7 +14,7 @@ Now it's possible to plot the data, for this I've used the well known `ggplot2` 
 
 The final cherry (on the cake) it's that you can interact with the plot, indeed if you click on the subregion of your interest it'll show you the name and the rate!
 
-![samples](italy_plot.png)
+![samples](little_italy.html)
 
 
 ## Instructions
