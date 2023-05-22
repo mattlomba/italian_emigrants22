@@ -10,15 +10,17 @@ When using different dataset it's important to standardize the records (in this 
 indeed we can have different way to call a place. In order to gather succesfully the two source of data I've used the `agrep` function, it's a string fuzzy matching function. It's not perfect, indeed I had to type a couple of subregions manually, overall it makes the trick! After the matching it's possible to create the new "rate" variable. 
 
 The ultimate join it's between the geographical coordinates, extracted by the library `map`, and the new dataset obtained in the last step. 
-Now it's possible to plot the data, for this I've used the well known `ggplot2` package.
-(more info about the libraries used is in the script above in the repository)
+Now it's possible to plot it!
+
+(for more detailed information see the R script above)
 
 ![samples](italy_plot.png)
 
 ## Instructions
 
-The "italian_emigrants22" it's a reproducible code, written in R language, that only needs in input the AIRE dataset.
+The "italian_emigrants22.R" it's a reproducible code, written in R language, that only needs in input the AIRE dataset.
 Just pay attention that all the packages are correctly installed on your device and that you've settled the path where the AIRE dataset is. 
+
 
 
 
