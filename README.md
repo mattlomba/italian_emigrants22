@@ -14,8 +14,10 @@ Now it's possible to plot the data, for this I've used the well known `ggplot2` 
 
 The final cherry (on the cake) it's that you can interact with the plot, indeed if you click on the subregion of your interest it'll show you the name and the rate!
 
+![samples](figs/italy_plot.png)
 
-##Instructions
+
+## Instructions
 
 The "italian_emigrants22" it's a reproducible code, written in R language, that only needs in input the AIRE dataset.
 Just pay attention that all the packages are correctly installed on your device and that you've settled the path where the AIRE dataset is. 
