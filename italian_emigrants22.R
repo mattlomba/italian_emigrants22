@@ -24,7 +24,7 @@ library(scico)
 
 #save where you prefer and set the path:
 #(you can do it also manually from the settings *)
-setwd("C:/Users/XXXXX/yourpath...")
+setwd("C:/Users/xxxx/yourpath...")
 
 #-------------------------------------------------------------------------------
 #DATA READING
@@ -66,19 +66,15 @@ View(wiki_table)
 #wiki_table$Provincia
 #aire_data$provincia
 
-#these can't be approximated by the agrep function
-#(agrep it's a string fuzzy matching function)
-wiki_table$Provincia[16]<-"Bolzano-Bozen"
-wiki_table$Provincia[4]<-"Aosta"
-aire_data$provincia[21]<-"Monza e Brianza"
 
-#return the position
+#minimize the distance beetween the "province" to find the best match
+#using the function adist
 pos<-c()
 for(i in 1:length(wiki_table$Provincia)){
-  pos[i]<-agrep(wiki_table$Provincia[i],aire_data$provincia)
+  pos[i]<-which.min(adist(wiki_table$Provincia[i],aire_data$provincia, ignore.case = T))
 }
 
-#we can finally match the data :D
+#matching it :D
 
 #adding the column:
 #aire_data$num[pos]  #107 lenght
@@ -115,11 +111,17 @@ ita<-map_data("italy")
 ita %>%
   group_by(region)
 
-#only these 2 "provincia" differs
+#View(ita)
+#unfortunately with the JOIN funcitons it's not possible to use string matching strategies
+#thus adjusting these in order to make the join
+#(you could decide to do that after the graph is plotted, so you can easily spot grey NA area)
+fin_table[fin_table=="L Aquila"]<-"L'Aquila"
+fin_table[fin_table=="Aosta/Aoste"]<-"Aosta"
+ita[ita=="Bolzano-Bozen"]<-"Bolzano"
 ita[ita=="Forli'"]<-"Forlì-Cesena"
-ita[ita=="L'Aquila"]<-"L Aquila"
 
-#QUERY to join the geographical position with the data gathered before
+
+#QUERY to join the geographical coordinates with the data gathered before
 #(region equal to our "province" in the English language)
 geo_data<-left_join(ita,fin_table,by=c("region" = "provincia"))
 
@@ -131,13 +133,13 @@ View(geo_data)
 #(other styles)
 #scale_fill_distiller(palette = "YlOrRd", direction = 1)+
 #scico::scale_fill_scico(palette = "devon",direction=-1)+
-#scale_fill_viridis_c(option = "magma", direction = -1)+
+#scale_fill_gradient2(low = "#ccffff", mid = "#0066cc",
+#high = "#000033", midpoint = 23)+
 
 graph <- ggplot(geo_data,aes(long,lat,text = paste0(region,": ",format(round(rate,2)), "%")))+
   geom_polygon(aes(x=long,y=lat,group=group,fill=rate))+
   geom_path(aes(x=long, y=lat, group=group), color="gray24",size=0.15)+
-  scale_fill_gradient2(low = "#ccffcc", mid = "#ff9933",
-                       high = "#330000", midpoint = 20) +
+  scale_fill_viridis_c(option = "magma", direction = -1)+
   labs(title="Italian Emigrants 2022")+
   theme_bw()
 
