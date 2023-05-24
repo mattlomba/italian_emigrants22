@@ -1,6 +1,6 @@
 # Italian emigrants 2022
 
-This project aims to show a graphical rappresentation of italians moving abroad in the year 2021-2022. 
+This is a data visualization project showing italians living/moving abroad in 2022. 
 
 The data were collected by A.I.R.E ("Anagrafe Italiani Residenti all'Estero") and the dataset was downloaded from the official minister [website](http://ucs.interno.gov.it/ucs/contenuti/Anagrafe_degli_italiani_residenti_all_estero_a.i.r.e._int_00041-8067961.htm) (you could also find a copy of the dataset in this repository).
 
@@ -20,8 +20,11 @@ Now it's possible to plot it!
 
 The "italian_emigrants22.R" is a reproducible code, written in R language, that only needs in input the AIRE dataset.
 Just pay attention that all the packages are correctly installed on your device and that you've settled the path where the AIRE dataset is. 
-
 The plot is in the "Viewer" not in "Plots", because it's an interactive graph made with `plotly`. 
+
+Disclaimer(This aren't official statistics because I've decided to use the Wikipedia's data, as proxy of the total number of population of each subregions,
+and I haven't used a more certified source of the same year. However the results slightly differs.)  
+
 
 
 
