@@ -16,14 +16,26 @@ Now it's possible to plot it!
 
 ![samples](italy_plot.png)
 
-## Instructions
 
-The "italian_emigrants22.R" is a reproducible code, written in R language, that only needs in input the AIRE dataset.
-Just pay attention that all the packages are correctly installed on your device and that you've settled the path where the AIRE dataset is. 
-The plot is in the "Viewer" not in "Plots", because it's an interactive graph made with `plotly`. 
+## Disclaimer
 
-Disclaimer: this aren't official statistics because I've decided to use the Wikipedia's data, as proxy of the total number of population of each subregions,
+This aren't official statistics because I've decided to use the Wikipedia's data, as proxy of the total number of population of each subregions,
 instead of a more certified source of data of the same year. However the results slightly differs. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
