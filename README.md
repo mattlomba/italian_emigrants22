@@ -17,9 +17,9 @@ Now it's possible to plot it!
 ![samples](italy_plot.png)
 
 
-## Disclaimer
 
-This aren't official statistics because I've decided to use the Wikipedia's data, as proxy of the total number of population of each subregions,
+
+Disclaimer: this aren't official statistics because I've decided to use the Wikipedia's data, as proxy of the total number of population of each subregions,
 instead of a more certified source of data of the same year. However the results slightly differs. 
 
 
