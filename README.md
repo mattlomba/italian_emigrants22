@@ -12,7 +12,6 @@ indeed we can have different way to call a city, also typos could occur. In orde
 The ultimate JOIN is between the geographical coordinates, extracted with the library `map`, and the new dataset obtained in the last step. 
 Now it's possible to plot it!
 
-(for more detailed information see the R script above)
 
 ![samples](italy_plot.png)
 
